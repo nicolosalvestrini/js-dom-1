@@ -15,7 +15,7 @@ bottoneAccendiSpegni.addEventListener("click", function interrutore() {
 
         setTimeout (() => {
             immagineEasteregg.classList.add("d-none");
-            immagineLampadinaSpenta.classList.add("spenta");
+            immagineLampadinaSpenta.classList.remove("d-none");
             bottoneAccendiSpegni.innerText = "Accendi";
         }, 2000);
         return;
