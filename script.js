@@ -5,7 +5,23 @@ const immagineEasteregg =document.querySelector("img.easteregg");
 let contatoreClick = 0;
 
 bottoneAccendiSpegni.addEventListener("click", function interrutore() {
+    contatoreClick++
 
+    if(contatoreClick === 10){
+        immagineLampadinaSpenta.classList.remove("spenta");
+        immagineLamadinaAccesa.classList.add("d-none");
+        immagineEasteregg.classList.remove("d-none");
+        bottoneAccendiSpegni.innerText = "super sayaaannn";
+
+        setTimeout (() => {
+            immagineEasteregg.classList.add("d-none");
+            immagineLampadinaSpenta.classList.add("spenta");
+            bottoneAccendiSpegni.innerText = "Accendi";
+        }, 2000);
+        return;
+    }
+
+    
     const lampadinaSpenta = immagineLamadinaAccesa.classList.contains("d-none");
     if (lampadinaSpenta) {
         immagineLampadinaSpenta.classList.remove("spenta")
